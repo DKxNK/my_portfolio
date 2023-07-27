@@ -71,7 +71,7 @@ const OtherProjects = () => {
 
   return (
     <div
-      name="portfolio"
+      name="other_portfolio"
       className="h-auto bg-gradient-to-b from-gray-800 to-gray-800 w-full text-white "
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ">
