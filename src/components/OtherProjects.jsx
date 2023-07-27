@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-
-import paf1 from "../assets/portfolio/paf1.png";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
 import github from "../assets/github.png";
 
 const OtherProjects = () => {
@@ -91,41 +86,38 @@ const OtherProjects = () => {
           gap-8 px-12 sm:px-0 text-center py-4 pb-6"
         >
           {/* Show a limited number of cards based on the visibleCards state */}
-          {portfolios.slice(0, visibleCards).map(({ id, title, discription, href, t1, t2, t3, t4, t5, t6 }) => (
-            <div
-              key={id}
-              className="w-full shadow-md shadow-cyan-300 bg-gradient-to-b from-slate-600 to-gray-800 rounded-lg 
+          {portfolios
+            .slice(0, visibleCards)
+            .map(({ id, title, discription, href, t1, t2, t3, t4, t5, t6 }) => (
+              <div
+                key={id}
+                className="w-full shadow-md shadow-cyan-300 bg-gradient-to-b from-slate-600 to-gray-800 rounded-lg 
               flex flex-col p-4 my-4 hover:scale-105 duration-300 "
-            >
-              <h2 className="text-2xl font-bold text-center py-4">
-                {title}
-              </h2>
-              <p className="text-justify text-md">
-                {discription}
-              </p>
-              <div className="text-center font-medium ">
-                <h1 className="border-b mx-20 mt-4">Technologies </h1>
-                <div className="grid grid-cols-3 sm:grid-cols-3 capitalize mt-2 text-cyan-200">
-                  <p>{t1}</p>
-                  <p>{t2}</p>
-                  <p>{t3}</p>
-                  <p>{t4}</p>
-                  <p>{t5}</p>
-                  <p>{t6}</p>
+              >
+                <h2 className="text-2xl font-bold text-center py-4">{title}</h2>
+                <p className="text-justify text-md">{discription}</p>
+                <div className="text-center font-medium ">
+                  <h1 className="border-b mx-20 mt-4">Technologies </h1>
+                  <div className="grid grid-cols-3 sm:grid-cols-3 capitalize mt-2 text-cyan-200">
+                    <p>{t1}</p>
+                    <p>{t2}</p>
+                    <p>{t3}</p>
+                    <p>{t4}</p>
+                    <p>{t5}</p>
+                    <p>{t6}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-left pt-2 ">
+                  <img
+                    href={href}
+                    src={github}
+                    alt=""
+                    className="w-7 mx-auto cursor-pointer"
+                  />
                 </div>
               </div>
-
-              <div className="flex items-left pt-2 ">
-                <img
-                  href={href}
-                  src={github}
-                  alt=""
-                  className="w-7 mx-auto cursor-pointer"
-                />
-              </div>
-            </div>
-          ))}
-          
+            ))}
         </div>
         {/* Show "See More" button when there are more cards to display */}
         {visibleCards < portfolios.length && (
