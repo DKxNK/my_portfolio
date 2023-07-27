@@ -11,19 +11,46 @@ const OtherProjects = () => {
   const portfolios = [
     {
       id: 1,
-      src: paf1,
+      title: "Employee Management System",
+      discription: "using C# build crud functions (WebApp)",
+      href: "https://github.com/DKxNK",
+      t1: "C#",
+      t2: "html",
+      t3: "css",
+      t4: "js",
+      t5: "ssms",
     },
     {
       id: 2,
-      src: reactParallax,
+      title: " Management system for a food distribution company",
+      discription: "My Y2.S2 Univercity Project | ITP Module (WebApp)",
+      href: "https://github.com/DKxNK",
+      t1: "Express",
+      t2: "Node.js",
+      t3: "mongo",
+      t4: "react",
+      t5: "tailwind",
+      t6: "js",
     },
     {
       id: 3,
-      src: navbar,
+      title: "Library Management System ",
+      discription: "My Y1.S2 Univercity Project | IWT Module (WebApp)",
+      href: "https://github.com/DKxNK",
+      t1: "Html",
+      t2: "CSS",
+      t3: "PHP",
+      t4: "MySQL",
+      t5: "js",
     },
     {
       id: 4,
-      src: reactSmooth,
+      title: "Test Test Test",
+      discription: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+      href: "https://github.com/DKxNK",
+      t1: "test",
+      t2: "test",
+      t3: "test",
     },
   ];
 
@@ -61,36 +88,34 @@ const OtherProjects = () => {
 
         <div
           className="items-center justify-center grid p-20 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 
-          gap-8 px-12 sm:px-0 text-center py-4 pb-20"
+          gap-8 px-12 sm:px-0 text-center py-4 pb-6"
         >
           {/* Show a limited number of cards based on the visibleCards state */}
-          {portfolios.slice(0, visibleCards).map(({ id, src ,href}) => (
+          {portfolios.slice(0, visibleCards).map(({ id, title, discription, href, t1, t2, t3, t4, t5, t6 }) => (
             <div
               key={id}
               className="w-full shadow-md shadow-cyan-300 bg-gradient-to-b from-slate-600 to-gray-800 rounded-lg 
-              flex flex-col p-4 my-4 hover:scale-105 duration-300"
+              flex flex-col p-4 my-4 hover:scale-105 duration-300 "
             >
               <h2 className="text-2xl font-bold text-center py-4">
-                Test Test Test
+                {title}
               </h2>
-              <p className="text-center text-md">
-                I'm focused on creating and design meaningful user interfaces
-                and experiences for the web. I'm also a strong communicator and
-                am able to quickly understand and communicate with people.
+              <p className="text-justify text-md">
+                {discription}
               </p>
-              <div className="text-center font-medium">
+              <div className="text-center font-medium ">
                 <h1 className="border-b mx-20 mt-4">Technologies </h1>
                 <div className="grid grid-cols-3 sm:grid-cols-3 capitalize mt-2 text-cyan-200">
-                  <p>Test</p>
-                  <p>Test</p>
-                  <p>Test</p>
-                  <p>Test</p>
-                  <p>Test</p>
-                  <p>Test</p>
+                  <p>{t1}</p>
+                  <p>{t2}</p>
+                  <p>{t3}</p>
+                  <p>{t4}</p>
+                  <p>{t5}</p>
+                  <p>{t6}</p>
                 </div>
               </div>
 
-              <div className="flex items-left pt-2">
+              <div className="flex items-left pt-2 ">
                 <img
                   href={href}
                   src={github}
@@ -100,19 +125,19 @@ const OtherProjects = () => {
               </div>
             </div>
           ))}
-
-          {/* Show "See More" button when there are more cards to display */}
-          {visibleCards < portfolios.length && (
-            <div className="mx-auto flex items-center">
-              <button
-                className="border-2 shadow-gray-600 rounded-lg bg-cyan-900 w-60"
-                onClick={handleSeeMore}
-              >
-                See More
-              </button>
-            </div>
-          )}
+          
         </div>
+        {/* Show "See More" button when there are more cards to display */}
+        {visibleCards < portfolios.length && (
+          <div className="mx-auto flex items-center ">
+            <button
+              className="border-2 shadow-gray-600 rounded-lg bg-cyan-900 w-60"
+              onClick={handleSeeMore}
+            >
+              See More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

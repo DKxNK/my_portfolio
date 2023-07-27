@@ -12,7 +12,7 @@ const Portfolio = () => {
       id: 1,
       src: PAF,
       title: "flavorfeed Food Review WebApp",
-      discription: "I'm focused on creating and design meaningful user interfacesand experiences for the web. I'm also a strong communicator andam able to quickly understand and communicate with people",
+      discription: "This is a user-friendly social media platform allowing individuals to share their photos and descriptions in posts, follow others, and engage with their community through comments and likes. It provides for users to explore other profiles, receive notifications.",
       href: "https://github.com/DKxNK",
       t1: "springboot",
       t2: "java",
@@ -39,7 +39,7 @@ const Portfolio = () => {
       id: 3,
       src: MAD,
       title: "Hostel managment Android App",
-      discription: "I'm focused on creating and design meaningful user interfacesand experiences for the web. I'm also a strong communicator andam able to quickly understand and communicate with people",
+      discription: "Hostel Management Pro is made to make hostel management experience more fun and easier. There are many tasks in a hostel where it takes much time but with Hostel Management Pro app, users are only few clicks away to complete those same tasks. ",
       href: "https://github.com/Mr-RiVi/hostelmanagementpro-java.git",
       t1: "java",
       t2: "git",
@@ -49,7 +49,7 @@ const Portfolio = () => {
       id: 4,
       src: PAF,
       title: "TEST WebApp",
-      discription: "I'm focused on creating and design meaningful user interfacesand experiences for the web. I'm also a strong communicator andam able to quickly understand and communicate with people",
+      discription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       href: "https://github.com/DKxNK",
       t1: "test",
       t2: "test",
@@ -86,7 +86,7 @@ const Portfolio = () => {
       name="portfolio"
       className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-auto"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pb-10">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Portfolio
@@ -96,7 +96,7 @@ const Portfolio = () => {
 
         <div
           className="items-center justify-center grid p-20 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 
-          gap-8 px-12 sm:px-0 text-center py-4 pb-20"
+          gap-8 px-12 sm:px-0 text-center py-4 pb-6"
         >
           {/* Show a limited number of cards based on the visibleCards state */}
           {portfolios.slice(0, visibleCards).map(({ id, src, title, discription, href, t1, t2, t3, t4, t5, t6 }) => (
@@ -112,7 +112,7 @@ const Portfolio = () => {
               <h2 className="text-2xl font-bold text-center py-5 ">
                 {title}
               </h2>
-              <p className="text-center text-md text-justify">
+              <p className="text-md text-justify">
                 {discription}
               </p>
               <div className="text-center font-medium">
@@ -139,9 +139,9 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
-
-          {/* Show "See More" button when there are more cards to display */}
-          {visibleCards < portfolios.length && (
+        </div>
+        {/* Show "See More" button when there are more cards to display */}
+        {visibleCards < portfolios.length && (
             <div className="mx-auto flex items-center">
               <button
                 className="border-2 shadow-gray-600 rounded-lg bg-cyan-900 w-60"
@@ -151,7 +151,6 @@ const Portfolio = () => {
               </button>
             </div>
           )}
-        </div>
       </div>
     </div>
   );
