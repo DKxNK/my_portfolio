@@ -8,7 +8,7 @@ const OtherProjects = () => {
       id: 1,
       title: "Employee Management System",
       discription: "using C# build crud functions (WebApp)",
-      href: "https://github.com/DKxNK",
+      href: "https://github.com/DKxNK/CSharp-Employee-CRUD-",
       t1: "C#",
       t2: "html",
       t3: "css",
@@ -20,6 +20,7 @@ const OtherProjects = () => {
       title: " Management system for a food distribution company",
       discription: "My Y2.S2 Univercity Project | ITP Module (WebApp)",
       href: "https://github.com/DKxNK",
+      msg:"Repo Not Availble. Sorry 😇 ",
       t1: "Express",
       t2: "Node.js",
       t3: "mongo",
@@ -32,6 +33,7 @@ const OtherProjects = () => {
       title: "Library Management System ",
       discription: "My Y1.S2 Univercity Project | IWT Module (WebApp)",
       href: "https://github.com/DKxNK",
+      msg:"Repo Not Availble. Sorry 😇 ",
       t1: "Html",
       t2: "CSS",
       t3: "PHP",
@@ -43,6 +45,7 @@ const OtherProjects = () => {
       title: "Test Test Test",
       discription: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
       href: "https://github.com/DKxNK",
+      msg:"Repo Not Availble. Sorry 😇 ",
       t1: "test",
       t2: "test",
       t3: "test",
@@ -88,7 +91,7 @@ const OtherProjects = () => {
           {/* Show a limited number of cards based on the visibleCards state */}
           {portfolios
             .slice(0, visibleCards)
-            .map(({ id, title, discription, href, t1, t2, t3, t4, t5, t6 }) => (
+            .map(({ id, title, discription, href, t1, t2, t3, t4, t5, t6, msg }) => (
               <div
                 key={id}
                 className="w-full shadow-md shadow-cyan-300 bg-gradient-to-b from-slate-600 to-gray-800 rounded-lg 
@@ -108,14 +111,28 @@ const OtherProjects = () => {
                   </div>
                 </div>
 
-                <div className="flex items-left pt-2 ">
-                  <img
-                    href={href}
-                    src={github}
-                    alt=""
-                    className="w-7 mx-auto cursor-pointer"
-                  />
+                {/* Github icon */}
+                <div className="flex pt-2 ">
+                  {msg ? (
+                    <button className="mx-auto link-style-button" onClick={() => alert(msg)}>
+                      <img
+                        src={github}
+                        alt=""
+                        className="w-7 mx-auto cursor-pointer"
+                        title={msg}
+                      />
+                    </button>
+                  ) : (
+                    <a className="mx-auto" href={href} rel="noreferrer">
+                      <img
+                        src={github}
+                        alt=""
+                        className="w-7 mx-auto cursor-pointer"
+                      />
+                    </a>
+                  )}
                 </div>
+
               </div>
             ))}
         </div>

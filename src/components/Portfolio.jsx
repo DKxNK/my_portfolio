@@ -13,7 +13,7 @@ const Portfolio = () => {
       src: PAF,
       title: "flavorfeed Food Review WebApp",
       discription: "This is a user-friendly social media platform allowing individuals to share their photos and descriptions in posts, follow others, and engage with their community through comments and likes. It provides for users to explore other profiles, receive notifications.",
-      href: "https://github.com/DKxNK",
+      href: "https://github.com/Mr-RiVi/flavorfeed-springboot",
       t1: "springboot",
       t2: "java",
       t3: "mongo",
