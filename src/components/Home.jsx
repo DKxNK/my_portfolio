@@ -24,11 +24,11 @@ const Container = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: contain;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   right: 0;
   margin: auto;
@@ -111,7 +111,7 @@ const Home = () => {
               <directionalLight position={[3, 2, 1]} />
               <Sphere args={[1, 100, 200]} scale={2.6} >
                 <MeshDistortMaterial
-                  color="#3d1c56"
+                  color="#80daeb"
                   attach="material"
                   distort={0.5}
                   speed={2}
@@ -119,7 +119,7 @@ const Home = () => {
               </Sphere>
             </Suspense>
           </Canvas>
-          <Img src="./img/moon.png" />
+          <Img src="./img/b1.png" />
       </Container>
 
       </div>
