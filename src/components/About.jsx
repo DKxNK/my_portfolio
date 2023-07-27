@@ -14,9 +14,9 @@ const About = () => {
         </div>
 
         <p className="text-xl mt-8">
-          I'm Nalinga Kumarasiri and currently, I'm doing my Bachelors in 
+          I'm Nalinga Kumarasiri and currently, following my Bachelors in 
           Information Technology (2021-2024) at SLIIT (Sri Lanka Institute of Information Technology).<br />
-          Dedicated, hardworking, and self-motivated, I have a keen interest in programming and problem-solving.
+          Dedicated, hardworking, and self-motivated, I'm keen on programming and problem-solving.
         </p>
 
         <br />
@@ -24,11 +24,11 @@ const About = () => {
         <h2 className="text-xl semi-bold border-b-2 border-gray-500 mb-2">
           UI/UX Designer & Web Developer
         </h2>
-        <p>I'm focused on creating and design meaningful user interfaces and experiences for the web. 
-          I'm also a strong communicator and am able to quickly understand and communicate with people.</p>
+        <p>I'm focusing on creating and design meaningful user interfaces and experiences for the web. 
+          I'm also a strong communicator and am able to quickly understand and communicate effectively with people.</p>
 
           <h1 className="font-semibold mt-4">What I most like to do..</h1>
-          <div className="flex grid sm:grid-cols-2 md:grid-cols-3 mt-3 text-xl">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 mt-3 text-xl">
             <h1 className="px-6">⌨️ Coding</h1>
             <h1 className="px-6">🥇 Problem Solving</h1>
             <h1 className="px-6">📰 Reading</h1>
