@@ -27,7 +27,7 @@ const About = () => {
         <p>I'm focusing on creating and design meaningful user interfaces and experiences for the web. 
           I'm also a strong communicator and am able to quickly understand and communicate effectively with people.</p>
 
-          <h1 className="font-semibold mt-4">What I most like to do..</h1>
+          <h1 className="font-semibold mt-4">What I mostly like to do..</h1>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 mt-3 text-xl">
             <h1 className="px-6">⌨️ Coding</h1>
             <h1 className="px-6">🥇 Problem Solving</h1>
